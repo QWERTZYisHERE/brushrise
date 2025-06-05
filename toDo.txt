@@ -1,0 +1,28 @@
+//////////////////////////////////////////////////////////////////////
+// webcam X
+// png, transparent X
+// export pics X
+// recording X
+// redo: by using a second array for having the data X
+// dropdown ui brush X
+tinting X
+// more masking, chromatic X
+//////////////////////
+
+// opacity of brush x~
+// size of image (export) ~
+// UI/canvas rethink, ratio size ~
+
+
+/////////////////////
+
+
+
+
+
+// json,
+
+
+// layers -> clipping in canvas, filters,
+// background
+// gradient

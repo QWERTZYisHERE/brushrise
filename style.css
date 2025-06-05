@@ -1,0 +1,147 @@
+:root {}
+
+body {
+    margin: 0px;
+    width: 30px;
+    font-family: monospace;
+    overflow: hidden;
+    background-color: darkslategrey;
+
+
+}
+
+#centering {
+    position: relative;
+    padding-bottom: 20%;
+    /* 1000:200 */
+    height: 0;
+}
+
+#canvas {
+    position: fixed;
+    cursor: crosshair;
+    background: white;
+
+
+
+}
+
+
+
+.tools {
+    width: 120px;
+    top: 0;
+    right: 0;
+    height: 80%;
+    width: 8%;
+    border-left: 1px solid white;
+    background-color: rgba(125, 230, 208, 1);
+    padding: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+
+
+}
+
+#toolbar {
+    position: absolute;
+}
+
+
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.color-field {
+    flex: 1;
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 50%;
+    align-self: center;
+    margin: 0 15px;
+
+
+}
+
+.color-picker {
+    align-self: center;
+    margin: 10px;
+    min-height: 50px;
+    min-width: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+.button-div {
+    display: flex;
+}
+
+.typeAButton {
+    align-self: baseline;
+    padding: 10px;
+    width: 60px;
+    height: 40px;
+
+
+}
+
+button {
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    background: #222;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.pen-range {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    width: 120px;
+
+}
+
+#brushes {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#setting {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#canvasWidth {
+    width: 50px;
+    margin-left: 10px;
+}
+
+#canvasHeight {
+    width: 50px;
+    margin-left: 10px;
+}
+
+#inputImage{
+    margin-bottom: 15px;
+}
+
+#inputVideo{
+    margin-bottom: 15px;
+}
