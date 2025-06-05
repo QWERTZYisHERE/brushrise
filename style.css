@@ -31,7 +31,7 @@ body {
 .tools {
     width: 120px;
     top: 0;
-    right: 0;
+    left: 0;
     height: 80%;
     width: 8%;
     border-left: 1px solid white;
