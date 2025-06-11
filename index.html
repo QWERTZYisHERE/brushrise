@@ -20,97 +20,102 @@
 
         </div>
 
-        <div id="toolbar" class="tools">
 
-            <div class="button-div">
-                <button onclick="undo_last()" class="typeAButton" type="button">Undo</button>
-                <button onclick="redo_last()" class="typeAButton" type="button">Redo</button>
-
-            </div>
-            <button onclick="clear_canvas()" class="typeAButton" type="button">Clear</button>
-
-            <div class="button-div">
-                <button id="recorderButton" onclick="startOrStopRecording()" type="button"><a
-                        id="recordButton">Record</a><a id="recordingButton">Recording</a></button>
-                <button onclick="exportPNG()" type="button">Export Image</button>
-
-            </div>
-
-
-            <div>brushes</div>
-            <select id="brushes" onchange="setBrush()">
-                <option value="brush">Normal Brush</option>
-                <option value="erase">Eraser</option>
-                <option value="image">Image</option>
-                <option value="video">Video</option>
-                <option value="videoCam">Video Cam</option>
-            </select>
-
-
-
-            <input id="inputVideo" type="file" name="submit" accept="video/mp4, video/x-m4v, video/*" />
-            <input id="inputImage" type="file" name="submit" accept="image/png, image/jpeg" />
-
-            <div>setting</div>
-            <select id="setting" onchange="setComposition()">
-                <option>Normal</option>
-                <option>Xor</option>
-                <option>Clipping</option>
-                <option>source-in</option>
-                <option>source-out</option>
-                <option>destination-in</option>
-                <option>destination-atop</option>
-                <option>lighter</option>
-                <option>multiply</option>
-                <option>screen</option>
-                <option>overlay</option>
-                <option>lighten</option>
-                <option>color-dodge</option>
-                <option>color-burn</option>
-                <option>hard-light</option>
-                <option>soft-light</option>
-                <option>difference</option>
-                <option>exclusion</option>
-                <option>hue</option>
-                <option >saturation</option>
-                <option >color</option>
-                <option>luminosity</option>
-            </select>
-
-
-            <div>color</div>
-            <input oninput="draw_color = this.value" type="color" class="color-picker">
-            <div>size</div><a id="sizeInput"></a>
-            <input oninput="draw_width = this.value" type="range" min="1" max="500" value="2" class="pen-range" id="sizeChange">
-
-            <div>opacity</div> <a id="opacityInput"></a>
-            <input oninput="opacity = this.value" type="range" min="0.01" max="1" value="1" step="0.01" class="pen-range" id="opacityChange">
-
-
-
-            <!-- canvas goes blank after changing canvas size -->
-
-            <div>contrast</div> <a id="contrastInput"></a>
-            <input oninput="contrast = this.value" type="range" min="1" max="200" value="100" class="pen-range" id="changeContrast">
-
-            <div>hue rotation</div> <a id="hueInput"></a>
-            <input oninput="hueRotation = this.value" type="range" min="0" max="360" value="1" class="pen-range" id="changeHue">
-            <div>blur</div> <a id="blurInput"></a>
-            <input oninput="bluring = this.value" type="range" min="0" max="100" value="0" class="pen-range" id="changeBlur">
-
-            <div>canvas size</div>
-            <div class="button-div">
-                <input oninput="canvas.width = this.value" id="canvasWidth" type="number" min="1" max="10000"
-                    value="500" class="pen-range">
-                <input oninput="canvas.height = this.value" id="canvasHeight" type="number" min="1" max="10000"
-                    value="500" class="pen-range">
-
-            </div>
-
-            <!-- hiding certain GUIs-->
-        </div>
 
     </div>
+    <div id="toolbar" class="tools">
+
+        <div class="button-div">
+            <button onclick="undo_last()" class="typeAButton" type="button">Undo</button>
+            <button onclick="redo_last()" class="typeAButton" type="button">Redo</button>
+
+        </div>
+        <button onclick="clear_canvas()" class="typeAButton" type="button">Clear</button>
+
+        <div class="button-div">
+            <button id="recorderButton" onclick="startOrStopRecording()" type="button"><a id="recordButton">Record</a><a
+                    id="recordingButton">Recording</a></button>
+            <button onclick="exportPNG()" type="button">Export Image</button>
+
+        </div>
+
+
+        <div>brushes</div>
+        <select id="brushes" onchange="setBrush()">
+            <option value="brush">Normal Brush</option>
+            <option value="erase">Eraser</option>
+            <option value="image">Image</option>
+            <option value="video">Video</option>
+            <option value="videoCam">Video Cam</option>
+        </select>
+
+
+
+        <input id="inputVideo" type="file" name="submit" accept="video/mp4, video/x-m4v, video/*" />
+        <input id="inputImage" type="file" name="submit" accept="image/png, image/jpeg" />
+
+        <div>setting</div>
+        <select id="setting" onchange="setComposition()">
+            <option>Normal</option>
+            <option>Xor</option>
+            <option>Clipping</option>
+            <option>source-in</option>
+            <option>source-out</option>
+            <option>lighter</option>
+            <option>multiply</option>
+            <option>screen</option>
+            <option>overlay</option>
+            <option>lighten</option>
+            <option>color-dodge</option>
+            <option>color-burn</option>
+            <option>hard-light</option>
+            <option>soft-light</option>
+            <option>difference</option>
+            <option>exclusion</option>
+            <option>hue</option>
+            <option>saturation</option>
+            <option>color</option>
+            <option>luminosity</option>
+        </select>
+
+
+        <div>color</div>
+        <input oninput="draw_color = this.value" type="color" class="color-picker">
+        <div>size</div><a id="sizeInput"></a>
+        <input oninput="draw_width = this.value" type="range" min="1" max="500" value="2" class="pen-range"
+            id="sizeChange">
+
+        <div>opacity</div> <a id="opacityInput"></a>
+        <input oninput="opacity = this.value" type="range" min="0.01" max="1" value="1" step="0.01" class="pen-range"
+            id="opacityChange">
+
+
+
+        <!-- canvas goes blank after changing canvas size -->
+
+        <div>contrast</div> <a id="contrastInput"></a>
+        <input oninput="contrast = this.value" type="range" min="1" max="200" value="100" class="pen-range"
+            id="changeContrast">
+
+        <div>hue rotation</div> <a id="hueInput"></a>
+        <input oninput="hueRotation = this.value" type="range" min="0" max="360" value="1" class="pen-range"
+            id="changeHue">
+        <div>blur</div> <a id="blurInput"></a>
+        <input oninput="bluring = this.value" type="range" min="0" max="100" value="0" class="pen-range"
+            id="changeBlur">
+
+        <div>canvas size</div>
+        <div class="button-div">
+            <input oninput="canvas.width = this.value" id="canvasWidth" type="number" min="1" max="10000" value="500"
+                class="pen-range">
+            <input oninput="canvas.height = this.value" id="canvasHeight" type="number" min="1" max="10000" value="500"
+                class="pen-range">
+
+        </div>
+
+        <!-- hiding certain GUIs-->
+    </div>
+
     <div id="brush-cursor" style="position: absolute; pointer-events: none; border: 1px solid black; border-radius: 50%; 
             transform: translate(-50%, -50%); z-index: 9999; display: none;">
     </div>

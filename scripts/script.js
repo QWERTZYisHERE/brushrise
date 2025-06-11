@@ -136,8 +136,6 @@ function setComposition() {
     "source-atop",
     "source-in",
     "source-out",
-    "destination-in",
-    "destination-atop",
     "lighter",
     "multiply",
     "screen",
