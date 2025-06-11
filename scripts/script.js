@@ -97,6 +97,10 @@ function change_color(element) {
 
 document.getElementById("inputVideo").setAttribute("style", "display: none;");
 document.getElementById("inputImage").setAttribute("style", "display: none;");
+document.getElementById("contrastWhole").setAttribute("style", "display: none;");
+document.getElementById("hueWhole").setAttribute("style", "display: none;");
+document.getElementById("blurWhole").setAttribute("style", "display: none;");
+
 
 function setBrush() {
   brush = document.getElementById("brushes").selectedIndex;
@@ -104,26 +108,41 @@ function setBrush() {
   if (brush == 4) {
     document.getElementById("inputVideo").setAttribute("style", "display: none;");
     document.getElementById("inputImage").setAttribute("style", "display: none;");
+    document.getElementById("contrastWhole").setAttribute("style", "display: block;");
+    document.getElementById("hueWhole").setAttribute("style", "display: block;");
+    document.getElementById("blurWhole").setAttribute("style", "display: block;");
     startCam();
   } else if (brush == 3) {
     document.getElementById("inputVideo").setAttribute("style", "display: block;");
     document.getElementById("inputImage").setAttribute("style", "display: none;");
+    document.getElementById("contrastWhole").setAttribute("style", "display: block;");
+    document.getElementById("hueWhole").setAttribute("style", "display: block;");
+    document.getElementById("blurWhole").setAttribute("style", "display: block;");
     stopCam();
 
   } else if (brush == 2) {
     document.getElementById("inputVideo").setAttribute("style", "display: none;");
     document.getElementById("inputImage").setAttribute("style", "display: block;");
+    document.getElementById("contrastWhole").setAttribute("style", "display: block;");
+    document.getElementById("hueWhole").setAttribute("style", "display: block;");
+    document.getElementById("blurWhole").setAttribute("style", "display: block;");
     stopCam();
 
   } else if (brush == 1) {
     document.getElementById("inputVideo").setAttribute("style", "display: none;");
     document.getElementById("inputImage").setAttribute("style", "display: none;");
+    document.getElementById("contrastWhole").setAttribute("style", "display: none;");
+    document.getElementById("hueWhole").setAttribute("style", "display: none;");
+    document.getElementById("blurWhole").setAttribute("style", "display: none;");
     stopCam();
     console.log("erasing");
 
   } else if (brush == 0) {
     document.getElementById("inputVideo").setAttribute("style", "display: none;");
     document.getElementById("inputImage").setAttribute("style", "display: none;");
+    document.getElementById("contrastWhole").setAttribute("style", "display: none;");
+    document.getElementById("hueWhole").setAttribute("style", "display: none;");
+    document.getElementById("blurWhole").setAttribute("style", "display: none;");
     stopCam();
   }
 }
@@ -134,8 +153,6 @@ function setComposition() {
     "source-over",
     "xor",
     "source-atop",
-    "source-in",
-    "source-out",
     "lighter",
     "multiply",
     "screen",

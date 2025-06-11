@@ -59,8 +59,6 @@
             <option>Normal</option>
             <option>Xor</option>
             <option>Clipping</option>
-            <option>source-in</option>
-            <option>source-out</option>
             <option>lighter</option>
             <option>multiply</option>
             <option>screen</option>
@@ -92,17 +90,24 @@
 
 
         <!-- canvas goes blank after changing canvas size -->
+        <div id="contrastWhole">
+            <div>contrast</div> <a id="contrastInput"></a>
+            <input oninput="contrast = this.value" type="range" min="1" max="200" value="100" class="pen-range"
+                id="changeContrast">
+        </div>
+        <div id="hueWhole">
+            <div>hue rotation</div> <a id="hueInput"></a>
+            <input oninput="hueRotation = this.value" type="range" min="0" max="360" value="1" class="pen-range"
+                id="changeHue">
+        </div>
 
-        <div>contrast</div> <a id="contrastInput"></a>
-        <input oninput="contrast = this.value" type="range" min="1" max="200" value="100" class="pen-range"
-            id="changeContrast">
 
-        <div>hue rotation</div> <a id="hueInput"></a>
-        <input oninput="hueRotation = this.value" type="range" min="0" max="360" value="1" class="pen-range"
-            id="changeHue">
-        <div>blur</div> <a id="blurInput"></a>
-        <input oninput="bluring = this.value" type="range" min="0" max="100" value="0" class="pen-range"
-            id="changeBlur">
+        <div id="blurWhole">
+            <div>blur</div> <a id="blurInput"></a>
+            <input oninput="bluring = this.value" type="range" min="0" max="100" value="0" class="pen-range"
+                id="changeBlur">
+        </div>
+
 
         <div>canvas size</div>
         <div class="button-div">
